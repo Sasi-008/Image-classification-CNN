@@ -41,7 +41,7 @@ if uploaded_file is not None:
     prediction = predict_image(model, image_bytes)
 
     # Display prediction
-    if prediction > 0.1:
+    if prediction > 0.5:
         st.write("Prediction: Human")
     else:
         st.write("Prediction: Horse")
