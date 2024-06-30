@@ -30,14 +30,10 @@ def predict_image(model, image_bytes):
     prediction = model.predict(img)
     return prediction[0][0]
 
-# Caching the model to avoid reloading it on every run
-@st.cache(allow_output_mutation=True)
-def load_model():
-    model = tf.keras.models.load_model('horse_or_human_model.h5')
-    return model
+
 
 # Load the model
-model = load_model()
+model = tf.keras.models.load_model('horse_or_human_model.h5')
 
 # Title and file upload
 st.title('Image Classification App (Horse or Human)')
