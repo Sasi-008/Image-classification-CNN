@@ -50,15 +50,12 @@ if uploaded_file is not None:
     st.write("")
     st.write("Classifying...")
 
-    try:
-        # Make prediction
-        prediction = predict_image(model, image_bytes)
+    # Make prediction
+    prediction = predict_image(model, image_bytes)
 
-        # Display prediction
-        if prediction > 0.5:
-            st.write("Prediction: Human")
-        else:
-            st.write("Prediction: Horse")
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
-        st.stop()
+    # Display prediction
+    if prediction > 0.5:
+        st.write("Prediction: Human")
+    else:
+        st.write("Prediction: Horse")
+    
