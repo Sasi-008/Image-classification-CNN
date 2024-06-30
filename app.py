@@ -5,6 +5,11 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image as PILImage
 import io
+import os
+
+# Suppress TensorFlow warnings and logs
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # FATAL
+tf.get_logger().setLevel('ERROR')
 
 # Function to load and preprocess the image
 def load_and_preprocess_image(image_bytes, target_size=(300, 300)):
