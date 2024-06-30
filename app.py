@@ -42,7 +42,7 @@ if uploaded_file is not None:
 
     # Display prediction
     st.write(prediction)
-    if prediction > 0.1:
+    if prediction > 0.05:
         st.write("Prediction: Human")
     else:
         st.write("Prediction: Horse")
