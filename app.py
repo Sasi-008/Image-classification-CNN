@@ -26,7 +26,7 @@ model = tf.keras.models.load_model('horse_or_human_model.h5')
 
 # Title and file upload
 st.title('Image Classification App (Horse or Human)')
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg"])
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg","png"])
 
 # Display uploaded image and make prediction
 if uploaded_file is not None:
